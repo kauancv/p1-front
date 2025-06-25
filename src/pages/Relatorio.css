@@ -1,0 +1,89 @@
+/* pages/Relatorio.css */
+
+/* Estilos gerais (reaproveitados com sufixo -r para evitar conflitos) */
+.body-relatorio {
+    background-color: #1e1f36;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.header-superior-r {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+}
+
+.voltar-r {
+    color: #31c500;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.config-r {
+    color: #31c500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.config-r svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+
+.titulo-container-r {
+    background-color: #31c500;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.titulo-r {
+    color: #1e1f36;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Conteúdo central da página de relatório */
+.container-r {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px; /* Mais espaço vertical */
+    gap: 20px; /* Espaço entre os itens da lista */
+}
+
+.relatorio-item {
+    display: flex;
+    justify-content: space-between; /* Alinha o label à esquerda e o valor à direita */
+    align-items: center;
+    width: 100%;
+    max-width: 350px; /* Largura máxima para a linha */
+}
+
+.relatorio-label {
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    margin-right: 15px; /* Espaço entre o texto e o valor */
+}
+
+.relatorio-value {
+    background-color: #d9d9d9;
+    color: #1e1f36;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 60px; /* Garante que os boxes tenham uma largura mínima */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
