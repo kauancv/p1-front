@@ -14,46 +14,41 @@ const EyeIcon = () => (
 export default function AlterarSenha() {
     const navigate = useNavigate();
 
-    const [novaSenha, setNovaSenha] = useState('');
-    const [confirmarSenha, setConfirmarSenha] = useState('');
-    const [mostrarNovaSenha, setMostrarNovaSenha] = useState(false);
-    const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState(false);
+    const [newPassword, setNewPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [showNewPassword, setShowNewPassword] = useState(false);
+    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-    
     const [errors, setErrors] = useState({});
 
-    const handleConfirmar = () => {
-        
+    const handleConfirm = () => {
         const newErrors = {};
 
-        if (novaSenha.length < 8) {
-            newErrors.novaSenha = 'A SENHA DEVE TER NO MÍNIMO 8 DÍGITOS';
+        if (newPassword.length < 8) {
+            newErrors.newPassword = 'A SENHA DEVE TER NO MÍNIMO 8 DÍGITOS';
         }
 
-        if (novaSenha !== confirmarSenha) {
-            newErrors.confirmarSenha = 'AS SENHAS NÃO COINCIDEM';
+        if (newPassword !== confirmPassword) {
+            newErrors.confirmPassword = 'AS SENHAS NÃO COINCIDEM';
         }
 
-        
         setErrors(newErrors);
 
-        
         if (Object.keys(newErrors).length === 0) {
-            console.log("Nova senha (simulado):", novaSenha);
+            console.log("Nova senha (simulado):", newPassword);
             alert("Senha alterada com sucesso! (Simulação)");
             navigate('/perfil');
         }
     };
 
-    const handleVoltar = () => {
+    const handleBack = () => {
         navigate(-1);
     };
 
     return (
         <div className="body-alterar-senha">
-            
             <div className="header-superior-as">
-                <div className="voltar-as" onClick={handleVoltar}>&lt;&lt; Voltar</div>
+                <div className="voltar-as" onClick={handleBack}>&lt;&lt; Voltar</div>
                 <div className="config-as">
                     <svg viewBox="0 0 24 24"><path d="M19.43..."></path></svg>
                 </div>
@@ -68,18 +63,18 @@ export default function AlterarSenha() {
                     <label className="label-senha">Nova senha</label>
                     <div className="input-container">
                         <input
-                            type={mostrarNovaSenha ? 'text' : 'password'}
+                            type={showNewPassword ? 'text' : 'password'}
                             className="input-senha"
                             placeholder="Nova senha"
-                            value={novaSenha}
-                            onChange={(e) => setNovaSenha(e.target.value)}
+                            value={newPassword}
+                            onChange={(e) => setNewPassword(e.target.value)}
                         />
-                        <span className="eye-icon" onClick={() => setMostrarNovaSenha(!mostrarNovaSenha)}>
+                        <span className="eye-icon" onClick={() => setShowNewPassword(!showNewPassword)}>
                             <EyeIcon />
                         </span>
                     </div>
-                    {/*Exibe a mensagem de erro para o campo 'novaSenha' */}
-                    {errors.novaSenha && <p className="mensagem-erro">{errors.novaSenha}</p>}
+                    {/*Exibe a mensagem de erro para o campo 'newPassword' */}
+                    {errors.newPassword && <p className="mensagem-erro">{errors.newPassword}</p>}
                 </div>
 
                 {/* Campo Confirmar Senha */}
@@ -87,21 +82,21 @@ export default function AlterarSenha() {
                     <label className="label-senha">Confirmar senha</label>
                     <div className="input-container">
                         <input
-                            type={mostrarConfirmarSenha ? 'text' : 'password'}
+                            type={showConfirmPassword ? 'text' : 'password'}
                             className="input-senha"
                             placeholder="Confirmar senha"
-                            value={confirmarSenha}
-                            onChange={(e) => setConfirmarSenha(e.target.value)}
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
                         />
-                        <span className="eye-icon" onClick={() => setMostrarConfirmarSenha(!mostrarConfirmarSenha)}>
+                        <span className="eye-icon" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                             <EyeIcon />
                         </span>
                     </div>
-                    {/* Exibe a mensagem de erro para o campo 'confirmarSenha' */}
-                    {errors.confirmarSenha && <p className="mensagem-erro">{errors.confirmarSenha}</p>}
+                    {/* Exibe a mensagem de erro para o campo 'confirmPassword' */}
+                    {errors.confirmPassword && <p className="mensagem-erro">{errors.confirmPassword}</p>}
                 </div>
 
-                <button className="botao-confirmar-as" onClick={handleConfirmar}>
+                <button className="botao-confirmar-as" onClick={handleConfirm}>
                     Confirmar
                 </button>
             </div>

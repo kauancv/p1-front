@@ -8,30 +8,29 @@ export default function AlterarNome() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const nomeVindoDoPerfil = location.state?.nomeAtual || '';
-    const [novoNome, setNovoNome] = useState(nomeVindoDoPerfil);
+    const nameFromProfile = location.state?.currentName || '';
+    const [newName, setNewName] = useState(nameFromProfile);
 
-    
-    const [erro, setErro] = useState('');
+    const [error, setError] = useState('');
 
-    const handleConfirmar = () => {
-        // MODIFICADO: Lógica de validação
-        if (!novoNome.trim()) {
-            // Se o campo estiver vazio, define a mensagem de erro
-            setErro('PREENCHA O CAMPO DE NOME');
-            return; // Interrompe a função
+    const handleConfirm = () => {
+        // MODIFIED: Validation logic
+        if (!newName.trim()) {
+            // If the field is empty, set the error message
+            setError('PREENCHA O CAMPO DE NOME');
+            return; // Stop the function
         }
 
-        // Se a validação passar, limpa qualquer erro anterior
-        setErro('');
+        // If validation passes, clear any previous error
+        setError('');
 
-        // Simula o envio para a API
-        console.log(`Nome alterado para: ${novoNome}`);
+        // Simulate API submission
+        console.log(`Nome alterado para: ${newName}`);
         alert("Nome alterado com sucesso! (Simulação)");
         navigate('/perfil');
     };
 
-    const handleVoltar = () => {
+    const handleBack = () => {
         navigate(-1);
     };
 
@@ -39,7 +38,7 @@ export default function AlterarNome() {
         <div className="body-alterar-nome">
             
             <div className="header-superior-an">
-                <div className="voltar-an" onClick={handleVoltar}>&lt;&lt; Voltar</div>
+                <div className="voltar-an" onClick={handleBack}>&lt;&lt; Voltar</div>
                 <div className="config-an">
                     <svg viewBox="0 0 24 24"><path d="M19.43..."></path></svg>
                 </div>
@@ -50,20 +49,20 @@ export default function AlterarNome() {
 
             <div className="container-an">
                 <div className="form-grupo">
-                    <label htmlFor="nome-completo" className="label-nome">Nome</label>
+                    <label htmlFor="full-name" className="label-nome">Nome</label>
                     <input
                         type="text"
-                        id="nome-completo"
+                        id="full-name"
                         className="input-nome"
                         placeholder="Nome completo"
-                        value={novoNome}
-                        onChange={(e) => setNovoNome(e.target.value)}
+                        value={newName}
+                        onChange={(e) => setNewName(e.target.value)}
                     />
                     
-                    {erro && <p className="mensagem-erro">{erro}</p>}
+                    {error && <p className="mensagem-erro">{error}</p>}
                 </div>
 
-                <button className="botao-confirmar" onClick={handleConfirmar}>
+                <button className="botao-confirmar" onClick={handleConfirm}>
                     Confirmar
                 </button>
             </div>
