@@ -2,19 +2,19 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Relatorio.css'; // Novo arquivo CSS
+import './Relatorio.css'; 
 
 export default function Relatorio() {
     const navigate = useNavigate();
 
     // Dados do relatório (simulando dados vindos de uma API)
     const dadosRelatorio = [
-        { label: 'Total de questões', value: 45 },
-        { label: 'Total de acertos', value: 32 },
-        { label: 'Total de erros', value: 13 },
-        { label: 'Questões feitas (Nível 2)', value: 5 },
-        { label: 'Questões feitas (Nível 1)', value: 15 },
-        { label: 'Questões feitas (Nível Jr)', value: 25 },
+        { label: 'Total de questões', value: 0 },
+        { label: 'Total de acertos', value: 0 },
+        { label: 'Total de erros', value: 0 },
+        { label: 'Questões feitas (Nível 2)', value: 0 },
+        { label: 'Questões feitas (Nível 1)', value: 0 },
+        { label: 'Questões feitas (Nível Jr)', value: 0 },
     ];
 
     const handleVoltar = () => {

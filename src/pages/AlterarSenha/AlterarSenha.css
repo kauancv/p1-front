@@ -1,36 +1,30 @@
-/* Reset básico e fonte padrão */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+/* pages/AlterarSenha.css */
 
-/* Corpo principal da tela Alterar Nome */
-.body-alterar-nome {
+
+.body-alterar-senha {
     background-color: #1e1f36;
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
-/* Header Superior */
-.header-superior-an {
+.header-superior-as {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
 }
 
-.voltar-an {
+.voltar-as {
     color: #31c500;
     font-size: 18px;
     cursor: pointer;
 }
 
-.config-an {
+.config-as {
     color: #31c500;
     cursor: pointer;
     display: flex;
@@ -38,65 +32,80 @@
     justify-content: center;
 }
 
-.config-an svg {
+.config-as svg {
     width: 30px;
     height: 30px;
     fill: currentColor;
 }
 
-/* Título */
-.titulo-container-an {
+.titulo-container-as {
     background-color: #31c500;
     padding: 10px;
     width: 100%;
     text-align: center;
 }
 
-.titulo-an {
+.titulo-as {
     color: #1e1f36;
     font-weight: bold;
     font-size: 22px;
 }
 
-/* Conteúdo central */
-.container-an {
+
+.container-as {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Alinha itens ao topo */
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 60px; /* Espaço do topo */
+    padding-top: 40px;
     gap: 25px;
 }
 
-.form-grupo {
+.form-grupo-as {
     width: 320px;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Espaço entre o label e o input */
+    gap: 8px;
 }
 
-.label-nome {
+.label-senha {
     font-size: 16px;
     color: white;
-    align-self: flex-start; /* Alinha o label à esquerda */
+    align-self: flex-start;
 }
 
-.input-nome {
+
+.input-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-senha {
     width: 100%;
     padding: 15px;
+    padding-right: 50px; 
     border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #d9d9d9; /* Cor de fundo cinza claro */
+    background-color: #d9d9d9;
     font-size: 16px;
     color: #333;
 }
 
-.input-nome::placeholder {
-    color: #888;
+.eye-icon {
+    position: absolute;
+    right: 15px; 
+    cursor: pointer;
+    color: #555;
+    display: flex;
+    align-items: center;
 }
 
-.botao-confirmar {
+
+
+.botao-confirmar-as {
     background-color: #31c500;
     color: white;
     border: none;
@@ -106,20 +115,21 @@
     font-size: 18px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.3);
     transition: background-color 0.3s;
-    width: 320px; /* Mesma largura do grupo de formulário */
+    width: 320px;
+    margin-top: 10px; 
 }
 
-.botao-confirmar:hover {
+.botao-confirmar-as:hover {
     background-color: #28a400;
 }
 
-/* Adicione esta classe no final do seu arquivo CSS */
+
 
 .mensagem-erro {
-    color: #ff5252; /* Um tom de vermelho vivo */
+    color: #ff5252; 
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    margin-top: 8px; /* Espaço entre o campo e a mensagem */
+    margin-top: 8px; 
     width: 100%;
 }

@@ -11,7 +11,7 @@ export default function AlterarNome() {
     const nomeVindoDoPerfil = location.state?.nomeAtual || '';
     const [novoNome, setNovoNome] = useState(nomeVindoDoPerfil);
 
-    // NOVO: Estado para controlar a mensagem de erro
+    
     const [erro, setErro] = useState('');
 
     const handleConfirmar = () => {
@@ -37,7 +37,7 @@ export default function AlterarNome() {
 
     return (
         <div className="body-alterar-nome">
-            {/* ... (Header e Título não mudam) ... */}
+            
             <div className="header-superior-an">
                 <div className="voltar-an" onClick={handleVoltar}>&lt;&lt; Voltar</div>
                 <div className="config-an">
@@ -59,7 +59,7 @@ export default function AlterarNome() {
                         value={novoNome}
                         onChange={(e) => setNovoNome(e.target.value)}
                     />
-                    {/* NOVO: Exibe a mensagem de erro se ela existir */}
+                    
                     {erro && <p className="mensagem-erro">{erro}</p>}
                 </div>
 

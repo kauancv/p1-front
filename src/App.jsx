@@ -1,9 +1,9 @@
 // App.js
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Perfil from "./pages/Perfil.jsx";
-import AlterarNome from "./pages/AlterarNome.jsx";
-import AlterarSenha from "./pages/AlterarSenha.jsx";
-import Relatorio from "./pages/Relatorio.jsx"; // 1. Importe o novo componente
+import Perfil from "./pages/Perfil/Perfil.jsx";
+import AlterarNome from "./pages/AlterarNome/AlterarNome.jsx";
+import AlterarSenha from "./pages/AlterarSenha/AlterarSenha.jsx";
+import Relatorio from "./pages/Relatorio/Relatorio.jsx"; // 1. Importe o novo componente
 
 function App() {
     return (

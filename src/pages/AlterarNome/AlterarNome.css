@@ -1,30 +1,36 @@
-/* pages/AlterarSenha.css */
 
-/* Estilos gerais (reaproveitados com prefixo -as para evitar conflitos) */
-.body-alterar-senha {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.body-alterar-nome {
     background-color: #1e1f36;
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     color: white;
-    font-family: Arial, sans-serif;
 }
 
-.header-superior-as {
+
+.header-superior-an {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
 }
 
-.voltar-as {
+.voltar-an {
     color: #31c500;
     font-size: 18px;
     cursor: pointer;
 }
 
-.config-as {
+.config-an {
     color: #31c500;
     cursor: pointer;
     display: flex;
@@ -32,80 +38,64 @@
     justify-content: center;
 }
 
-.config-as svg {
+.config-an svg {
     width: 30px;
     height: 30px;
     fill: currentColor;
 }
 
-.titulo-container-as {
+
+.titulo-container-an {
     background-color: #31c500;
     padding: 10px;
     width: 100%;
     text-align: center;
 }
 
-.titulo-as {
+.titulo-an {
     color: #1e1f36;
     font-weight: bold;
     font-size: 22px;
 }
 
-/* Conteúdo central específico da página */
-.container-as {
+
+.container-an {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; 
     align-items: center;
-    padding-top: 40px;
-    gap: 25px;
+    padding-top: 60px; 
 }
 
-.form-grupo-as {
+.form-grupo {
     width: 320px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 8px; 
 }
 
-.label-senha {
+.label-nome {
     font-size: 16px;
     color: white;
     align-self: flex-start;
 }
 
-/* --- Estilos para o Input com Ícone --- */
-.input-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.input-senha {
+.input-nome {
     width: 100%;
     padding: 15px;
-    padding-right: 50px; /* Adiciona espaço à direita para o ícone */
     border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #d9d9d9;
+    background-color: #d9d9d9; 
     font-size: 16px;
     color: #333;
 }
 
-.eye-icon {
-    position: absolute;
-    right: 15px; /* Posição do ícone */
-    cursor: pointer;
-    color: #555; /* Cor do ícone */
-    display: flex;
-    align-items: center;
+.input-nome::placeholder {
+    color: #888;
 }
 
-/* --- Fim dos estilos do Input --- */
-
-.botao-confirmar-as {
+.botao-confirmar {
     background-color: #31c500;
     color: white;
     border: none;
@@ -115,21 +105,21 @@
     font-size: 18px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.3);
     transition: background-color 0.3s;
-    width: 320px;
-    margin-top: 10px; /* Espaço extra acima do botão */
+    width: 320px; 
+    margin-top: 20px;
 }
 
-.botao-confirmar-as:hover {
+.botao-confirmar:hover {
     background-color: #28a400;
 }
 
-/* Adicione esta classe no final do seu arquivo CSS */
+
 
 .mensagem-erro {
-    color: #ff5252; /* Um tom de vermelho vivo */
+    color: #ff5252; 
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    margin-top: 8px; /* Espaço entre o campo e a mensagem */
+    margin-top: 8px;
     width: 100%;
 }

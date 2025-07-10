@@ -1,6 +1,5 @@
 /* pages/Relatorio.css */
 
-/* Estilos gerais (reaproveitados com sufixo -r para evitar conflitos) */
 .body-relatorio {
     background-color: #1e1f36;
     display: flex;
@@ -51,29 +50,29 @@
     font-size: 22px;
 }
 
-/* Conteúdo central da página de relatório */
+
 .container-r {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 20px; /* Mais espaço vertical */
-    gap: 20px; /* Espaço entre os itens da lista */
+    padding: 30px 20px; 
+    gap: 20px; 
 }
 
 .relatorio-item {
     display: flex;
-    justify-content: space-between; /* Alinha o label à esquerda e o valor à direita */
+    justify-content: space-between; 
     align-items: center;
     width: 100%;
-    max-width: 350px; /* Largura máxima para a linha */
+    max-width: 350px; 
 }
 
 .relatorio-label {
     color: white;
     font-size: 18px;
     text-align: left;
-    margin-right: 15px; /* Espaço entre o texto e o valor */
+    margin-right: 15px; 
 }
 
 .relatorio-value {
@@ -83,7 +82,7 @@
     font-size: 18px;
     padding: 10px;
     border-radius: 5px;
-    min-width: 60px; /* Garante que os boxes tenham uma largura mínima */
+    min-width: 60px; 
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }

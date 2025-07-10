@@ -19,11 +19,11 @@ export default function AlterarSenha() {
     const [mostrarNovaSenha, setMostrarNovaSenha] = useState(false);
     const [mostrarConfirmarSenha, setMostrarConfirmarSenha] = useState(false);
 
-    // NOVO: Usar um objeto para os erros de cada campo
+    
     const [errors, setErrors] = useState({});
 
     const handleConfirmar = () => {
-        // MODIFICADO: Lógica de validação completa
+        
         const newErrors = {};
 
         if (novaSenha.length < 8) {
@@ -34,10 +34,10 @@ export default function AlterarSenha() {
             newErrors.confirmarSenha = 'AS SENHAS NÃO COINCIDEM';
         }
 
-        // Atualiza o estado dos erros com todos os erros encontrados
+        
         setErrors(newErrors);
 
-        // Se o objeto de erros estiver vazio, a validação passou
+        
         if (Object.keys(newErrors).length === 0) {
             console.log("Nova senha (simulado):", novaSenha);
             alert("Senha alterada com sucesso! (Simulação)");
@@ -51,7 +51,7 @@ export default function AlterarSenha() {
 
     return (
         <div className="body-alterar-senha">
-            {/* ... (Header e Título não mudam) ... */}
+            
             <div className="header-superior-as">
                 <div className="voltar-as" onClick={handleVoltar}>&lt;&lt; Voltar</div>
                 <div className="config-as">
@@ -78,7 +78,7 @@ export default function AlterarSenha() {
                             <EyeIcon />
                         </span>
                     </div>
-                    {/* NOVO: Exibe a mensagem de erro para o campo 'novaSenha' */}
+                    {/*Exibe a mensagem de erro para o campo 'novaSenha' */}
                     {errors.novaSenha && <p className="mensagem-erro">{errors.novaSenha}</p>}
                 </div>
 
@@ -97,7 +97,7 @@ export default function AlterarSenha() {
                             <EyeIcon />
                         </span>
                     </div>
-                    {/* NOVO: Exibe a mensagem de erro para o campo 'confirmarSenha' */}
+                    {/* Exibe a mensagem de erro para o campo 'confirmarSenha' */}
                     {errors.confirmarSenha && <p className="mensagem-erro">{errors.confirmarSenha}</p>}
                 </div>
 
